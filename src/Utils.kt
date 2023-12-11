@@ -39,3 +39,11 @@ fun <T> List<T>.splitPredicate(p: Predicate<T>): List<List<T>> {
     return res
 }
 
+
+fun <T> List<List<T>>.transpose(): List<List<T>> {
+    return (this[0].indices).map { i -> (this.indices).map { j -> this[j][i] } }
+}
+
+fun transposeStrings(list: List<String>): List<String> {
+    return list.map { it.toList() }.transpose().map { it.joinToString("") }
+}
