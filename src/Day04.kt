@@ -1,6 +1,6 @@
 fun main() {
-    val readInput: List<Pair<Int, Int>> = readInput("input_day04").map(::parse)
-//    val readInput: List<String> = readInput("input_day04.test")
+    val readInput: List<Pair<Int, Int>> = readInput("input_day04.txt").map(::parse)
+//    val readInput: List<String> = readInput("input_day04.txt.test")
     readInput.map(::worth).sum().println()
 
     val n = readInput.size
